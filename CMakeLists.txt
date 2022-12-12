@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(mipt_flat_2020_practice2)
+project(flat_practice)
 
 set(CMAKE_CXX_STANDARD 17)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
@@ -12,7 +12,7 @@ add_executable(Test main_test.cpp)
 
 add_test(Test ${PROJECT_SOURCE_DIR}/bin/testing)
 
-add_executable(mipt_flat_2020_practice2 main.cpp)
+add_executable(flat_practice main.cpp)
 
 add_library(EarleyParser SHARED
         src/EarleyParser.cpp
@@ -23,7 +23,7 @@ add_library(EarleyParser SHARED
         include/GrammarRule.h
         )
 
-target_link_libraries(mipt_flat_2020_practice2 EarleyParser)
+target_link_libraries(flat_practice EarleyParser)
 
 target_link_libraries(Test EarleyParser)
 target_link_libraries(Test Threads::Threads ${GTEST_LIBRARIES} ${GMOCK_BOTH_LIBRARIES})
