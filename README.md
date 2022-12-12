@@ -11,6 +11,6 @@ C++, googletest
 *    ./build.sh 
 *    cd bin
 *    ./Test
-*    cd bin     
+*    cd bin
 *    ./mipt_flat_practice2
 
